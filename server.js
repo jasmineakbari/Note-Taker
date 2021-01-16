@@ -21,6 +21,17 @@ function createNewNote(body, notesArray) {
     return note;
 }
 
+// new note valiation
+function validateNote(note) {
+    if (!note.title || typeof note.title !== 'string') {
+        return false;
+    }
+    if (!note.text || typeof note.text !== 'string') {
+        return false;
+    }
+    return true;
+}
+
 // retrieves existing notes in json format
 app.get('/api/notes', (req, res) => {
     res.json(notes);
@@ -31,10 +42,15 @@ app.post('/api/notes', (req, res) => {
     // set id of new note
     req.body.id = notes.length.toString();
 
-    // add note to json file and notes array in this function
-    const note = createNewNote(req.body, notes);
+    // if any data in req.body is incorrect, send 400 error back
+    if(!validateNote(req.body)) {
+        res.status(400).send('The note is improperly formatted.');
+    } else {
+        // add note to json file and notes array in this function
+        const note = createNewNote(req.body, notes);
 
-    res.json(req.body);
+        res.json(req.body);
+    }
 });
 
 // listens for requests and responses
