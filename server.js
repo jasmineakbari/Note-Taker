@@ -4,6 +4,7 @@ const express = require('express');
 const PORT = process.env.PORT || 3001;
 const app = express();
 const { notes } = require('./db/db');
+// app.use(express.static('public'));
 
 // parse incoming string or array data this is done after creating post request handler
 app.use(express.urlencoded({ extended: true }));
