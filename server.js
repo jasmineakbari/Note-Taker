@@ -3,6 +3,18 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const { notes } = require('./db/db');
 
+// parse incoming string or array data this is done after creating post request handler
+app.use(express.urlencoded({ extended: true }));
+// parse incoming JSON data
+app.use(express.json());
+
+// function to create new notes
+function createNewNote(body, notesArray) {
+    console.log(body);
+    
+    return body;
+}
+
 // retrieves existing notes
 app.get('/api/notes', (req, res) => {
     res.json(notes);
