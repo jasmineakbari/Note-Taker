@@ -59,6 +59,12 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
 })
 
+// html route for Notes page
+app.get('/notes', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/notes.html'));
+})
+
+
 // listens for requests and responses
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
