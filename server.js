@@ -65,6 +65,14 @@ app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, './public/notes.html'));
 })
 
+// creating routing to delete notes by retrieving id
+app.delete('/notes/:id', (req, res) => {
+    const select = findById(req.params.id, notes);
+
+    deleteNote(select, notes);
+    res.json();
+})
+
 
 // listens for requests and responses
 app.listen(PORT, () => {
