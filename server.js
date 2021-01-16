@@ -1,3 +1,5 @@
+const fs = require('fs');
+const path = require('path');
 const express = require('express');
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -10,19 +12,28 @@ app.use(express.json());
 
 // function to create new notes
 function createNewNote(body, notesArray) {
-    console.log(body);
-    
-    return body;
+    const note = body;
+    notesArray.push(note);
+    fs.writeFileSync(
+        path.join(__dirname, './db/db.json'),
+        JSON.stringify({ notes: notesArray }, null, 2)
+    );
+    return note;
 }
 
-// retrieves existing notes
+// retrieves existing notes in json format
 app.get('/api/notes', (req, res) => {
     res.json(notes);
 });
 
 // how to hand post requests from front end
 app.post('/api/notes', (req, res) => {
-    console.log(req.body);
+    // set id of new note
+    req.body.id = notes.length.toString();
+
+    // add note to json file and notes array in this function
+    const note = createNewNote(req.body, notes);
+
     res.json(req.body);
 });
 

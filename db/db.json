@@ -1,9 +1,14 @@
 {
-    "notes": [
-        {
-            "title": "Test Title",
-            "text": "Test text",
-            "id": "0"
-        }
-    ]
+  "notes": [
+    {
+      "title": "Test Title",
+      "text": "Test text",
+      "id": "0"
+    },
+    {
+      "title": "Week 11 Project",
+      "text": "Clone starter code and complete functionality, fix any errors",
+      "id": "1"
+    }
+  ]
 }
