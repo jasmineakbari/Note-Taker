@@ -53,6 +53,11 @@ app.post('/api/notes', (req, res) => {
     }
 });
 
+// html route for landing page
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+})
+
 // listens for requests and responses
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
