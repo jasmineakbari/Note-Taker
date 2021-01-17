@@ -40,7 +40,7 @@ function findById(id, noteArray) {
     return retrieve;
 }
 
-// delete not function
+// delete note function
 function deleteNote(list, noteArray) {
     const selected = noteArray.indexOf(list);
 
@@ -82,12 +82,12 @@ app.get('/notes', (req, res) => {
 })
 
 // creating routing to delete notes by retrieving id
-//app.delete('/notes/:id', (req, res) => {
-    //const select = findById(req.params.id, notes);
+app.delete('/notes/:id', (req, res) => {
+    const select = findById(req.params.id, notes);
 
-    //deleteNote(select, notes);
-    //res.json();
-//})
+    deleteNote(select, notes);
+    res.json();
+})
 
 
 // listens for requests and responses

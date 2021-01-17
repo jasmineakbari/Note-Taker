@@ -1,7 +1,7 @@
 # Note-Taker
 
 ## Description
-This is a simple note taking application deployed live using heroku. After pressing the Get Started buttong on the applications landing page you will be taken to the main functionality for the site. Helpful for keeping track of things you don't want to forget when you're on the fly! Read in the Usage section for more assistance with how the site works.
+This is a simple note taking application where you can create and delete notes deployed live using heroku. After pressing the Get Started buttong on the applications landing page you will be taken to the main functionality for the site. Helpful for keeping track of things you don't want to forget when you're on the fly! Read in the Usage section for more assistance with how the site works.
 
 ## Table of Contents
 * [Links](#Links)
