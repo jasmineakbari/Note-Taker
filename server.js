@@ -66,12 +66,12 @@ app.get('/notes', (req, res) => {
 })
 
 // creating routing to delete notes by retrieving id
-app.delete('/notes/:id', (req, res) => {
-    const select = findById(req.params.id, notes);
+//app.delete('/notes/:id', (req, res) => {
+    //const select = findById(req.params.id, notes);
 
-    deleteNote(select, notes);
-    res.json();
-})
+    //deleteNote(select, notes);
+    //res.json();
+//})
 
 
 // listens for requests and responses
