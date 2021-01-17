@@ -39,5 +39,5 @@ Starter code provided by:
 * MIT
 
 ## Contributions
-Created by: [GitHub](https//:github.com/jasmineakbari)github.com/jasmineakbari
+Created by: [GitHub](https//:github.com/jasmineakbari)/jasmineakbari
 Feel free to contact me at: jasmineakbari@yahoo.com, if you have any questions regarding this project.
