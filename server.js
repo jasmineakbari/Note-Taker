@@ -34,6 +34,22 @@ function validateNote(note) {
     return true;
 }
 
+// finding a note by it's id
+function findById(id, noteArray) {
+    const retrieve = noteArray.filter(note => note.id === id)[0];
+    return retrieve;
+}
+
+// delete not function
+function deleteNote(list, noteArray) {
+    const selected = noteArray.indexOf(list);
+
+    noteArray.splice(selected, 1);
+
+    fs.writeFileSync(path.join(__dirname, '.db/db.json'),
+        JSON.stringify({ notes: noteArray }, null, 2))
+}
+
 // retrieves existing notes in json format
 app.get('/api/notes', (req, res) => {
     res.json(notes);
