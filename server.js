@@ -35,19 +35,19 @@ function validateNote(note) {
 }
 
 // finding a note by it's id
-function findById(id, noteArray) {
-    const retrieve = noteArray.filter(note => note.id === id)[0];
+function findById(id, notesArray) {
+    const retrieve = notesArray.filter(notes => notes.id === id)[0];
     return retrieve;
 }
 
 // delete note function
-function deleteNote(list, noteArray) {
-    const selected = noteArray.indexOf(list);
+function deleteNote(list, notesArray) {
+    const selected = notesArray.indexOf(list);
 
-    noteArray.splice(selected, 1);
+    notesArray.splice(selected, 1);
 
     fs.writeFileSync(path.join(__dirname, '.db/db.json'),
-        JSON.stringify({ notes: noteArray }, null, 2))
+        JSON.stringify({ notes: notesArray }, null, 2))
 }
 
 // retrieves existing notes in json format
@@ -55,7 +55,7 @@ app.get('/api/notes', (req, res) => {
     res.json(notes);
 });
 
-// how to hand post requests from front end
+// how to handle post requests from front end
 app.post('/api/notes', (req, res) => {
     // set id of new note
     req.body.id = notes.length.toString();
