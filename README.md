@@ -19,16 +19,16 @@ Link to to the live application via heroku: [heroku](https://note-taker-ya.herok
 Here are some helpful images to assist in navigating the site:
 
 1. Click the "Get Started" button to begin using the application.
-![Step 1](./assets/images/step-1.png).
+![Step1](./assets/images/step-1.PNG).
 
 2. On the left side of the page is where you can see existing notes.
-![Step 1](./assets/images/step-2.png).
+![Step2](./assets/images/step-2.PNG).
 
 3. In the right side of the main section of the page you can edit and create a new note by typing in the "Note Title" and "Note Text" areas. Or activate a new note by clicking the pen icon.
-![Step 1](./assets/images/step-3.png).
+![Step3](./assets/images/step-3.PNG).
 
 4. You can then save the note to your existing notes by clicking the Disc icon in the top right.
-![Step 1](./assets/images/step-4.png).
+![Step4](./assets/images/step-4.PNG).
 
 ## Credits
 Starter code provided by: 
@@ -39,5 +39,5 @@ Starter code provided by:
 * MIT
 
 ## Contributions
-Created by: [GitHub](https//:github.com/jasmineakbari)
+Created by: [GitHub](https//:github.com/jasmineakbari)github.com/jasmineakbari
 Feel free to contact me at: jasmineakbari@yahoo.com, if you have any questions regarding this project.
