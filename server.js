@@ -71,6 +71,14 @@ app.post('/api/notes', (req, res) => {
     }
 });
 
+// creating routing to delete notes by retrieving id
+app.delete('/notes/:id', (req, res) => {
+    const select = findById(req.params.id, notes);
+
+    deleteNote(select, notes);
+    res.json();
+})
+
 // html route for landing page
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
@@ -79,14 +87,6 @@ app.get('/', (req, res) => {
 // html route for Notes page
 app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, './public/notes.html'));
-})
-
-// creating routing to delete notes by retrieving id
-app.delete('/notes/:id', (req, res) => {
-    const select = findById(req.params.id, notes);
-
-    deleteNote(select, notes);
-    res.json();
 })
 
 
